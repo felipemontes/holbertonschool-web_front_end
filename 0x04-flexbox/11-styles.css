@@ -314,18 +314,6 @@ a:active {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
-
-/*** 2. LAYOUT ***/
-
-/* Layout
-      ============================= */
-
-.container {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Grid
       ============================= */
 
@@ -354,12 +342,16 @@ ul.row {
 /* Navbar
       ============================= */
 
+.navbar-menu {
+  float: right;
+}
+
 .nav {
-  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
+  display: flex;
 }
 
 .nav .nav-item {
@@ -367,7 +359,6 @@ ul.row {
   font-weight: var(--nav-item-font-weight);
   font-size: var(--nav-item-font-size);
   letter-spacing: var(--nav-item-letter-spacing);
-  margin: var(--nav-item-margin);
 }
 
 .nav .nav-link {
@@ -404,17 +395,17 @@ ul.row {
 /* Header
       ============================= */
 
-.header {
-  padding: var(--header-padding);
-  position: relative;
-  z-index: 3;
-  background: transparent;
-}
-
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header {
+  padding: var(--header-padding);
+  position: relative;
+  z-index: 3;
+  background: transparent !important;
 }
 
 /* Footer
@@ -533,11 +524,13 @@ ul.row {
   min-height: 50vh;
 }
 
-/* Section Latest news ============================= */
+/* Section Latest news =============================*/
 
-.section-latest-news .row {
+.section-blog .row {
   flex-direction: row-reverse;
 }
+
+/*** 4. CARD ***/
 
 /* Section SERVICES ============================= */
 
@@ -545,13 +538,11 @@ ul.row {
   flex-wrap: wrap;
 }
 
-/* Section ABOUT US */
+/* Section ABOUT US ============================= */
 
 .section-about-us [class*="col-"] {
   align-self: center;
 }
-
-/*** 4. CARD ***/
 
 /* Card (all styles)
       ============================= */
@@ -689,7 +680,7 @@ ul.row {
 }
 
 .hero-article::before {
-  content: none;
+  content: "";
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
